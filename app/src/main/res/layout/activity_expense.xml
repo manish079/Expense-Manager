@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.manishprajapat.example.expensemanager.ExpenseActivity">
+
+    <include
+        android:id="@+id/tool"
+        layout="@layout/expense_toolbar" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/scroll"
+            android:background="@color/toolbar_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white_bg"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Invoice Number"
+                    android:textColor="#605C5C" />
+
+                <EditText
+                    android:id="@+id/et_eInvoiceNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/expense_input_boder"
+                    android:hint="Enter Invoice Number"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#605C5C" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="8dp"
+                        android:text="Date"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_eDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="8dp"
+                        android:text="24 January 2022"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_eEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:background="@drawable/main_boder"
+                        android:backgroundTint="@color/toolbar_bg"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Edit"
+                        android:textColor="#465DDD"
+                        android:textSize="16sp" />
+
+                    <!--                    <EditText-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:id="@+id/Birthday"-->
+                    <!--                        android:clickable="false"-->
+                    <!--                        android:cursorVisible="false"-->
+                    <!--                        android:focusable="false"-->
+                    <!--                        android:layout_weight="0.4"-->
+                    <!--                        android:background="@drawable/main_boder"-->
+                    <!--                        android:backgroundTint="@color/toolbar_bg"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:paddingTop="5dp"-->
+                    <!--                        android:paddingBottom="5dp"-->
+                    <!--                        android:textColor="#465DDD"-->
+                    <!--                        android:textSize="16sp"-->
+                    <!--                        android:hint="Edit"/>-->
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white_bg"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Full Name *"
+                    android:textColor="#605C5C" />
+
+                <EditText
+                    android:id="@+id/et_eName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/expense_input_boder"
+                    android:hint="Full Name *"
+                    android:inputType="textCapWords"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#605C5C" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Mobile Number *"
+                    android:textColor="#605C5C" />
+
+                <EditText
+                    android:id="@+id/et_eMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/expense_input_boder"
+                    android:hint="Mobile Number *"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#605C5C" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Enter Category"
+                    android:textColor="#605C5C" />
+
+                <EditText
+                    android:id="@+id/et_eCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/edit_text_corner"
+                    android:hint="Food &amp; Drink"
+                    android:inputType="textCapWords"
+                    android:padding="10dp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#605C5C" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white_bg"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Attach Invoice Details"
+                    android:textColor="#1B1717" />
+
+                <TextView
+                    android:id="@+id/tv_eAttach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="30dp"
+                    android:background="@color/attach_bg"
+                    android:drawableLeft="@drawable/ic_add"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="Attach"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_bg"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/white_bg"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="30"
+                        android:padding="5dp"
+                        android:text="Total"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_eTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/edit_text_corner"
+                        android:gravity="right"
+                        android:hint="Rs. 700"
+                        android:inputType="number"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#7A7878"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@color/border_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Paid Amount"
+                            android:textColor="#4C4949" />
+
+                        <TextView
+                            android:id="@+id/tvGetDue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Balance Amount"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/et_ePaidAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/edit_text_corner"
+                            android:gravity="right"
+                            android:hint="Rs. 500"
+                            android:inputType="number"
+                            android:paddingLeft="40dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="20dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="#7A7878"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_eBalanceAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="right"
+                            android:hint="Rs. 200.00"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/red"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnAddExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/button_bg"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
